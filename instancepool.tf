@@ -3,7 +3,7 @@ resource "exoscale_instance_pool" "instancepool" {
   description        = "Instance Pool"
   template_id        = data.exoscale_compute_template.ubuntu.id
   service_offering   = "micro"
-  size               = 2
+  size               = 4
   disk_size          = 10
   zone               = "at-vie-1"
   security_group_ids = [exoscale_security_group.sg-public.id]
