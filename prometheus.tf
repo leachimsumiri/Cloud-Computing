@@ -5,7 +5,6 @@ resource "exoscale_compute" "prometheus" {
   size               = "Medium"
   disk_size          = 10
   security_group_ids = [exoscale_security_group.prometheus.id]
-  key_pair           = "macbook"
   user_data          = <<EOF
 #!/bin/bash
 set -e
